@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import sao from './assets/sao.jpg';
+import TechList from './components/TechList';
 
 function App () {
-     return <img width="500" src={sao}/>
+     return <TechList />
 }
 
 export default App;
