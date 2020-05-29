@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import TechItem from './TechItem';
+
 class TechList extends Component {
     /** O State e imutavel so pode ser mudado usando o setState */
     state = {
@@ -32,10 +34,12 @@ class TechList extends Component {
             <form onSubmit={this.handleSubmit}>
                 <ul>
                     {this.state.techs.map(tech => (
-                        <li key={tech}>
-                            {tech}
-                            <button onClick={() => this.handleDelete(tech)} type="button">Remover</button>
-                        </li>
+                    /** Proriedade e tudo que passa para um componente */
+                        <TechItem 
+                            key={tech} 
+                            tech={tech} 
+                            onDelete={() => this.handleDelete(tech)} 
+                        />
                     ))}
                 </ul>
                 <input 
