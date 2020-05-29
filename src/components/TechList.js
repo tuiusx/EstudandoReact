@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class TechList extends Component {
+    /** O State e imutavel so pode ser mudado usando o setState */
     state = {
         newTech: '',
         techs: [
@@ -13,6 +14,7 @@ class TechList extends Component {
     handleInputChange = e => {
         this.setState({ newTech: e.target.value });
     }
+    /** Adicionando itens a lista */
     handleSubmit = e => {
         e.preventDefault();
     
@@ -20,7 +22,7 @@ class TechList extends Component {
             newTech: ''
         })
     }
-
+    /** Removendo itens da lista */
     handleDelete = (tech) => {
         this.setState({ techs: this.state.techs.filter(t => t !== tech) })
     }
