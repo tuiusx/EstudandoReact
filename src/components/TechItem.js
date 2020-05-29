@@ -16,9 +16,10 @@ TechItem.defaultProps = {
     tech: 'Oculto'
 };
 
-/** */
+/** Verificar se as propriedades estao corretas sendo passada */
 TechItem.prototype ={
     tech: PropTypes.string,
+    onDelete: PropTypes.func.isRequired,
 };
 
 export default TechItem;
