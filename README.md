@@ -1,5 +1,5 @@
 # **Estudando React**
-## **Lista**
+## **List**
 
 - [x] Conceitos do React
 - [x] Criando componente raiz
